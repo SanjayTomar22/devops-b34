@@ -5,7 +5,7 @@ pipeline {
         
         stage ('Git-Pull') {
             steps {
-                echo 'Git-Pull Success'
+                git branch: 'devops', url: 'https://github.com/shubhamkalsait/EasyCRUD.git'
             }
         }
          stage ("Build") {
