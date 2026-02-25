@@ -3,6 +3,15 @@ provider "aws" {
 region = "ap-northeast-3"
 }
 
+terraform {
+   backend "s3" {
+      bucket = "easy-crud-b34-bkt"
+      key    = "state/terraform.tfstate"
+      region = "ap-northeast-3"
+  }
+
+}
+
 # Create an IAM Role for the EKS Cluster
 resource "aws_iam_role" "eks_cluster_role" {
   name = "eks-cluster-role"
