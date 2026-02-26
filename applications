@@ -19,6 +19,8 @@ pipeline {
         stage ("Docker-Frontend-Build") {
             steps {
                 sh '''
+                cd ..
+                pwd
                 cd frontend
                 docker build -t kubesanjay/easy-frontend:latest .'''
             }
