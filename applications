@@ -29,7 +29,7 @@ pipeline {
             steps {
                sh '''
                 docker push kubesanjay/easy-backend:latest
-                docker push kubesanjay/easy-frontend:latest
+                docker push kubesanjay/easy-frontend:latest '''
             }
         }
          stage ("Deploy") {
